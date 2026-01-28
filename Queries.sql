@@ -45,3 +45,12 @@ FROM department d
 INNER JOIN employee e
 ON d.department_id=e.department_id
 GROUP BY d.department_name;
+
+
+-- creating indexes on column role_id 
+CREATE INDEX idx_employee_role
+ON employee(role_id);
+
+-- creating indexes on column department_id
+CREATE INDEX idx_employee_department
+ON employee(department_id);
